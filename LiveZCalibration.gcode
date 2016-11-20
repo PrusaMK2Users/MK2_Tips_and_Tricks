@@ -1,12 +1,14 @@
 G21 ; millimeter units
 G90 ; absolute positioning
 M83 ; relative extruding
+G28 W ; home without z leveling
+G1 Z50 F6000; home X axis into a safe heating position
+M104 S210 T0 ; this will take the layer 1 temperature for extruder 0
+M140 S55 ; this will take the layer 1 temperature for bed 0
+M190 S55 ; this will take the layer 1 temperature for bed 0
+M109 S210 T0 ; this will take the layer 1 temperature for extruder 0
 G28 W ; home without Z leveling
-M140 S60 ; start heating bed
-M190 S60 ; wait for bed temp
 G80 ; perform mesh bed-leveling
-M104 S200 ; start heating extruder
-M109 S200 ; wait for extruder temp
 G1 Y-3.0 F1020 ; move outside print area
 G1 X60 E9.01555689331 ; print first wipe line
 G1 X100 E12.4960975962 ; print second wipe line
