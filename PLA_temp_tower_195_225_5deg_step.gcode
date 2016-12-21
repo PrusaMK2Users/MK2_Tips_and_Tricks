@@ -187,8 +187,6 @@ M83
 M106 S0
 M115 U3.0.9 ; tell the printer latest firmware varsion available
 G28 W ; home all without mesh bed level
-M301 P24.54 I2.07 D72.87
-M304 P98.32 I4.04 D598.06
 M104 S195 T0 ; this will take the layer 1 temperature for extruder 0
 M140 S55 ; this will take the layer 1 temperature for bed 0
 G1 Z40 X250 Y-3.0 F3000
